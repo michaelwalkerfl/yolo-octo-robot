@@ -4,6 +4,12 @@ yolo-octo-robot
 Simple email list verifier made in Python.
 
 
-INSTALL
+Install
 ===============
+
 pip install -r requirements.txt
+
+Todo
+===============
+
+Add threading.

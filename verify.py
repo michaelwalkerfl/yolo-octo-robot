@@ -10,7 +10,7 @@ from validate_email import validate_email
 
 email_list = raw_input('Enter the name of your email list: ')
 
-validation_mode = raw_input('What mode would you like for this run? (Please enter Basic, MX or Full)')
+validation_mode = raw_input('What mode would you like for this run? (Please enter Basic, MX or Full): ')
 
 """ If 'Basic' mode, verify emails in list are syntactically correct. """
 if validation_mode == 'Basic':

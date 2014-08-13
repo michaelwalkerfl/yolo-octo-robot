@@ -16,22 +16,22 @@ validation_mode = raw_input('What mode would you like for this run? (Please ente
 if validation_mode == 'Basic':
     with open('%s' % email_list, 'r') as input, open('valid.%s' % email_list, 'w') as output:
         for line in input:
-            is_valid = validate_email(line)
+            is_valid = validate_email(line.strip())
             if is_valid:
-                output.write(line)
+                output.write(line.strip())
 
 """ If 'MX' mode, verify emails in list have MX server. """
 if validation_mode == 'MX':
     with open('%s' % email_list, 'r') as input, open('valid.%s' % email_list, 'w') as output:
         for line in input:
-            is_valid = validate_email(line, check_mx=True)
+            is_valid = validate_email(line.strip(), check_mx=True)
             if is_valid:
-                output.write(line)
+                output.write(line.strip())
 
 """ If 'Full' mode, attempt to verify that the user is valid at mx server. """
 if validation_mode == 'Full':
     with open('%s' % email_list, 'r') as input, open('valid.%s' % email_list, 'w') as output:
         for line in input:
-            is_valid = validate_email(line, verify=True)
+            is_valid = validate_email(line.strip(), verify=True)
             if is_valid:
-                output.write(line)
+                output.write(line.strip())
